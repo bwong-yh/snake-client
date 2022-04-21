@@ -16,10 +16,6 @@ const connect = () => {
 
     // display initials
     conn.write("Name: BW");
-
-    // setInterval(() => {
-    //   conn.write("Move: up");
-    // }, 1000);
   });
 
   // message from server (disconnected because of idling)

@@ -1,3 +1,5 @@
+const internal = require("stream");
+
 let connection;
 
 // setup input from the user
@@ -30,6 +32,9 @@ const handleInput = function (key) {
       return;
     case "d":
       connection.write("Move: right");
+      return;
+    case "\u000D":
+      connection.write("Say: LET'S PLAY");
       return;
   }
 };
