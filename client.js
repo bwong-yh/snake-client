@@ -10,12 +10,15 @@ const connect = () => {
   // convert all incoming data as utf8 text
   conn.setEncoding("utf8");
 
-  // log at first connection
   conn.on("connect", () => {
-    console.log("Connected!");
+    // message on first connection
+    console.log("Connected to game server!");
+
+    // display initials
+    conn.write("Name: BW");
   });
 
-  // idle message from server
+  // message from server (disconnected because of idling)
   conn.on("data", data => {
     console.log(data);
   });
