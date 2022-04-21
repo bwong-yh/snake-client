@@ -23,8 +23,8 @@ const connect = () => {
   });
 
   // message from server (disconnected because of idling)
-  conn.on("data", data => {
-    console.log(data);
+  conn.on("data", message => {
+    console.log(message);
   });
 
   return conn;
