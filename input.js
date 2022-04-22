@@ -1,4 +1,4 @@
-const internal = require("stream");
+const { encoding, keymap } = require("./constants");
 
 let connection;
 
@@ -8,7 +8,7 @@ const setupInput = function (conn) {
   const stdin = process.stdin;
 
   stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
+  stdin.setEncoding(encoding);
   stdin.resume();
 
   stdin.on("data", key => handleInput(key));
@@ -20,22 +20,10 @@ const setupInput = function (conn) {
 const handleInput = function (key) {
   if (key === "\u0003") process.exit();
 
-  switch (key) {
-    case "w":
-      connection.write("Move: up");
-      return;
-    case "a":
-      connection.write("Move: left");
-      return;
-    case "s":
-      connection.write("Move: down");
-      return;
-    case "d":
-      connection.write("Move: right");
-      return;
-    case "\u000D":
-      connection.write("Say: LET'S PLAY");
-      return;
+  if (key === "\u000D") {
+    connection.write("Say: LET'S PLAY");
+  } else {
+    connection.write(keymap[key]);
   }
 };
 

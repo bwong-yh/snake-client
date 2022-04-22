@@ -1,14 +1,12 @@
 const net = require("net");
+const { networkConfig, encoding } = require("./constants");
 
 // function to connect to the server
 const connect = () => {
-  const conn = net.createConnection({
-    host: "localhost",
-    port: 50541,
-  });
+  const conn = net.createConnection(networkConfig);
 
   // convert all incoming data as utf8 text
-  conn.setEncoding("utf8");
+  conn.setEncoding(encoding);
 
   conn.on("connect", () => {
     // message on first connection
