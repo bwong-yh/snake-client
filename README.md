@@ -19,8 +19,8 @@ Configurations can be done within the constants.js file.
 
 ## Final Product
 
-<img src="./screenshots/game-screenshot.png" width="800" height="450" alt="Player with name">
-<img src="./screenshots/game-screenshot-anon.png" width="800" height="450" alt="Player without name">
+![Player with name](./screenshots/game-screenshot.png)
+![Player without name](./screenshots/game-screenshot-anon.png)
 
 ## How to play
 
