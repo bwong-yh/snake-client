@@ -2,18 +2,15 @@ const net = require("net");
 const { networkConfig, encoding } = require("./constants");
 
 // function to connect to the server
-const connect = () => {
+const connect = name => {
   const conn = net.createConnection(networkConfig);
 
-  // convert all incoming data as utf8 text
+  // econding can be changed in the constants.js file
   conn.setEncoding(encoding);
 
   conn.on("connect", () => {
-    // message on first connection
     console.log("Connected to game server!");
-
-    // display initials
-    conn.write("Name: BW");
+    conn.write(`Name: ${name}`);
   });
 
   // message from server (disconnected because of idling)

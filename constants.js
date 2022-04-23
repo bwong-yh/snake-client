@@ -1,6 +1,6 @@
 // network config
 const networkConfig = {
-  HOST: "localhost",
+  host: "localhost",
   port: 50541,
 };
 
@@ -13,6 +13,9 @@ const keymap = {
   a: "Move: left",
   s: "Move: down",
   d: "Move: right",
+
+  // send canned messages
+  m: "Say: LET'S PLAY",
 };
 
 module.exports = { networkConfig, encoding, keymap };
