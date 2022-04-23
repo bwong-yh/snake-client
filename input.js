@@ -3,7 +3,7 @@ const { encoding, keymap } = require("./constants");
 let connection;
 
 // setup input from the user
-const setupInput = function (conn, name) {
+const setupInput = function(conn, name) {
   connection = conn(name);
   const stdin = process.stdin;
 
@@ -17,7 +17,7 @@ const setupInput = function (conn, name) {
 };
 
 // handle input from the user
-const handleInput = function (key) {
+const handleInput = function(key) {
   if (key === "\u0003") process.exit();
 
   connection.write(keymap[key]);

@@ -22,7 +22,7 @@ Configurations can be done within the constants.js file.
 ![Player with name](./game-screenshot.png)
 ![Player without name](./game-screenshot-anon.png)
 
-## How to play
+## How to Play
 
 - Use WASD to control the snake to eat the "apple" appears on the borad
 - Game over if the snake hits the edge of the screen or eats its own tail
