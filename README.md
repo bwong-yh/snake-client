@@ -25,5 +25,5 @@ Configurations can be done within the constants.js file.
 ## How to play
 
 - Use WASD to control the snake to eat the "apple" appears on the borad
-- Game over if the snake hit the edge of the screen or eat its own tail
-- press `ctrl + c` to exit game
+- Game over if the snake hits the edge of the screen or eats its own tail
+- press `ctrl + c` to exit game and use the same method above to restart game
