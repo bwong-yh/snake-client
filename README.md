@@ -12,7 +12,7 @@ Configurations can be done within the constants.js file.
 
 ## Getting Started
 
-- Follow steps inside the snek server repo to run the server side
+- Follow steps inside the [snek server repo](https://github.com/lighthouse-labs/snek-multiplayer) to run the server side
 - Run the development snake client using the `node play.js` command
 - Enter your initials or leave it blank, then press `Enter`
 - Your snake should appear on the board at a random position with your initials or ??? with a simple greeting
